@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C72A5FA11F98CE4D00D5FA03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A5FA01F98CE4D00D5FA03 /* AppDelegate.m */; };
+		C72A5FA41F98CE4D00D5FA03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A5FA31F98CE4D00D5FA03 /* ViewController.m */; };
+		C72A5FA71F98CE4D00D5FA03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72A5FA51F98CE4D00D5FA03 /* Main.storyboard */; };
+		C72A5FA91F98CE4D00D5FA03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72A5FA81F98CE4D00D5FA03 /* Assets.xcassets */; };
+		C72A5FAC1F98CE4D00D5FA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72A5FAA1F98CE4D00D5FA03 /* LaunchScreen.storyboard */; };
+		C72A5FAF1F98CE4D00D5FA03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A5FAE1F98CE4D00D5FA03 /* main.m */; };
+		C72A5FB91F98CE4E00D5FA03 /* StreamAMG_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A5FB81F98CE4E00D5FA03 /* StreamAMG_TestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C72A5FB51F98CE4E00D5FA03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C72A5F941F98CE4D00D5FA03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C72A5F9B1F98CE4D00D5FA03;
+			remoteInfo = "StreamAMG-Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C72A5F9C1F98CE4D00D5FA03 /* StreamAMG-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StreamAMG-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72A5F9F1F98CE4D00D5FA03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C72A5FA01F98CE4D00D5FA03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C72A5FA21F98CE4D00D5FA03 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C72A5FA31F98CE4D00D5FA03 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C72A5FA61F98CE4D00D5FA03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C72A5FA81F98CE4D00D5FA03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C72A5FAB1F98CE4D00D5FA03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C72A5FAD1F98CE4D00D5FA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C72A5FAE1F98CE4D00D5FA03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C72A5FB41F98CE4E00D5FA03 /* StreamAMG-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StreamAMG-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72A5FB81F98CE4E00D5FA03 /* StreamAMG_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamAMG_TestTests.m; sourceTree = "<group>"; };
+		C72A5FBA1F98CE4E00D5FA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C72A5F991F98CE4D00D5FA03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72A5FB11F98CE4E00D5FA03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C72A5F931F98CE4D00D5FA03 = {
+			isa = PBXGroup;
+			children = (
+				C72A5F9E1F98CE4D00D5FA03 /* StreamAMG-Test */,
+				C72A5FB71F98CE4E00D5FA03 /* StreamAMG-TestTests */,
+				C72A5F9D1F98CE4D00D5FA03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C72A5F9D1F98CE4D00D5FA03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C72A5F9C1F98CE4D00D5FA03 /* StreamAMG-Test.app */,
+				C72A5FB41F98CE4E00D5FA03 /* StreamAMG-TestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C72A5F9E1F98CE4D00D5FA03 /* StreamAMG-Test */ = {
+			isa = PBXGroup;
+			children = (
+				C72A5F9F1F98CE4D00D5FA03 /* AppDelegate.h */,
+				C72A5FA01F98CE4D00D5FA03 /* AppDelegate.m */,
+				C72A5FA21F98CE4D00D5FA03 /* ViewController.h */,
+				C72A5FA31F98CE4D00D5FA03 /* ViewController.m */,
+				C72A5FA51F98CE4D00D5FA03 /* Main.storyboard */,
+				C72A5FA81F98CE4D00D5FA03 /* Assets.xcassets */,
+				C72A5FAA1F98CE4D00D5FA03 /* LaunchScreen.storyboard */,
+				C72A5FAD1F98CE4D00D5FA03 /* Info.plist */,
+				C72A5FAE1F98CE4D00D5FA03 /* main.m */,
+			);
+			path = "StreamAMG-Test";
+			sourceTree = "<group>";
+		};
+		C72A5FB71F98CE4E00D5FA03 /* StreamAMG-TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				C72A5FB81F98CE4E00D5FA03 /* StreamAMG_TestTests.m */,
+				C72A5FBA1F98CE4E00D5FA03 /* Info.plist */,
+			);
+			path = "StreamAMG-TestTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C72A5F9B1F98CE4D00D5FA03 /* StreamAMG-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C72A5FBD1F98CE4E00D5FA03 /* Build configuration list for PBXNativeTarget "StreamAMG-Test" */;
+			buildPhases = (
+				C72A5F981F98CE4D00D5FA03 /* Sources */,
+				C72A5F991F98CE4D00D5FA03 /* Frameworks */,
+				C72A5F9A1F98CE4D00D5FA03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StreamAMG-Test";
+			productName = "StreamAMG-Test";
+			productReference = C72A5F9C1F98CE4D00D5FA03 /* StreamAMG-Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C72A5FB31F98CE4E00D5FA03 /* StreamAMG-TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C72A5FC01F98CE4E00D5FA03 /* Build configuration list for PBXNativeTarget "StreamAMG-TestTests" */;
+			buildPhases = (
+				C72A5FB01F98CE4E00D5FA03 /* Sources */,
+				C72A5FB11F98CE4E00D5FA03 /* Frameworks */,
+				C72A5FB21F98CE4E00D5FA03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C72A5FB61F98CE4E00D5FA03 /* PBXTargetDependency */,
+			);
+			name = "StreamAMG-TestTests";
+			productName = "StreamAMG-TestTests";
+			productReference = C72A5FB41F98CE4E00D5FA03 /* StreamAMG-TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C72A5F941F98CE4D00D5FA03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Peter Molnar";
+				TargetAttributes = {
+					C72A5F9B1F98CE4D00D5FA03 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					C72A5FB31F98CE4E00D5FA03 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C72A5F9B1F98CE4D00D5FA03;
+					};
+				};
+			};
+			buildConfigurationList = C72A5F971F98CE4D00D5FA03 /* Build configuration list for PBXProject "StreamAMG-Test" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C72A5F931F98CE4D00D5FA03;
+			productRefGroup = C72A5F9D1F98CE4D00D5FA03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C72A5F9B1F98CE4D00D5FA03 /* StreamAMG-Test */,
+				C72A5FB31F98CE4E00D5FA03 /* StreamAMG-TestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C72A5F9A1F98CE4D00D5FA03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72A5FAC1F98CE4D00D5FA03 /* LaunchScreen.storyboard in Resources */,
+				C72A5FA91F98CE4D00D5FA03 /* Assets.xcassets in Resources */,
+				C72A5FA71F98CE4D00D5FA03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72A5FB21F98CE4E00D5FA03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C72A5F981F98CE4D00D5FA03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72A5FA41F98CE4D00D5FA03 /* ViewController.m in Sources */,
+				C72A5FAF1F98CE4D00D5FA03 /* main.m in Sources */,
+				C72A5FA11F98CE4D00D5FA03 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C72A5FB01F98CE4E00D5FA03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72A5FB91F98CE4E00D5FA03 /* StreamAMG_TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C72A5FB61F98CE4E00D5FA03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C72A5F9B1F98CE4D00D5FA03 /* StreamAMG-Test */;
+			targetProxy = C72A5FB51F98CE4E00D5FA03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C72A5FA51F98CE4D00D5FA03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C72A5FA61F98CE4D00D5FA03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C72A5FAA1F98CE4D00D5FA03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C72A5FAB1F98CE4D00D5FA03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C72A5FBB1F98CE4E00D5FA03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C72A5FBC1F98CE4E00D5FA03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C72A5FBE1F98CE4E00D5FA03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YBS3Y2WC7;
+				INFOPLIST_FILE = "StreamAMG-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.StreamAMG-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C72A5FBF1F98CE4E00D5FA03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YBS3Y2WC7;
+				INFOPLIST_FILE = "StreamAMG-Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.StreamAMG-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C72A5FC11F98CE4E00D5FA03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YBS3Y2WC7;
+				INFOPLIST_FILE = "StreamAMG-TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.StreamAMG-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreamAMG-Test.app/StreamAMG-Test";
+			};
+			name = Debug;
+		};
+		C72A5FC21F98CE4E00D5FA03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YBS3Y2WC7;
+				INFOPLIST_FILE = "StreamAMG-TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.StreamAMG-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreamAMG-Test.app/StreamAMG-Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C72A5F971F98CE4D00D5FA03 /* Build configuration list for PBXProject "StreamAMG-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72A5FBB1F98CE4E00D5FA03 /* Debug */,
+				C72A5FBC1F98CE4E00D5FA03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C72A5FBD1F98CE4E00D5FA03 /* Build configuration list for PBXNativeTarget "StreamAMG-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72A5FBE1F98CE4E00D5FA03 /* Debug */,
+				C72A5FBF1F98CE4E00D5FA03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C72A5FC01F98CE4E00D5FA03 /* Build configuration list for PBXNativeTarget "StreamAMG-TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72A5FC11F98CE4E00D5FA03 /* Debug */,
+				C72A5FC21F98CE4E00D5FA03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C72A5F941F98CE4D00D5FA03 /* Project object */;
+}
