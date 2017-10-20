@@ -13,7 +13,9 @@
 		C72A5FA91F98CE4D00D5FA03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72A5FA81F98CE4D00D5FA03 /* Assets.xcassets */; };
 		C72A5FAC1F98CE4D00D5FA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72A5FAA1F98CE4D00D5FA03 /* LaunchScreen.storyboard */; };
 		C72A5FAF1F98CE4D00D5FA03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A5FAE1F98CE4D00D5FA03 /* main.m */; };
-		C72A5FB91F98CE4E00D5FA03 /* StreamAMG_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A5FB81F98CE4E00D5FA03 /* StreamAMG_TestTests.m */; };
+		C783242E1F99E8BB00B4EA62 /* PMOVideoDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C783242D1F99E8BB00B4EA62 /* PMOVideoDescriptor.m */; };
+		C78C61AD1F99EADB0028CBD0 /* PMOVideoDescriptorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C78C61AC1F99EADB0028CBD0 /* PMOVideoDescriptorFactory.m */; };
+		C78C61AF1F99ECC10028CBD0 /* PMOVideoDesriptorFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78C61AE1F99ECC10028CBD0 /* PMOVideoDesriptorFactoryTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C72048301F99E15400DB36DB /* NetworkReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkReachabilityManager.m; sourceTree = "<group>"; };
+		C72048311F99E15400DB36DB /* NetworkReachabilityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkReachabilityManager.h; sourceTree = "<group>"; };
+		C72048321F99E15400DB36DB /* PMODownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMODownloader.m; sourceTree = "<group>"; };
+		C72048331F99E15400DB36DB /* PMODownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMODownloader.h; sourceTree = "<group>"; };
+		C72048361F99E1B200DB36DB /* PMOPictureDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMOPictureDownloader.h; sourceTree = "<group>"; };
+		C72048371F99E1B200DB36DB /* PMOProgressUpdateable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMOProgressUpdateable.h; sourceTree = "<group>"; };
+		C72048381F99E1B200DB36DB /* PMOLocalPictureExtractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMOLocalPictureExtractor.h; sourceTree = "<group>"; };
+		C72048391F99E1B200DB36DB /* PMOJSONProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMOJSONProcessor.h; sourceTree = "<group>"; };
 		C72A5F9C1F98CE4D00D5FA03 /* StreamAMG-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StreamAMG-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72A5F9F1F98CE4D00D5FA03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C72A5FA01F98CE4D00D5FA03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,8 +48,12 @@
 		C72A5FAD1F98CE4D00D5FA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C72A5FAE1F98CE4D00D5FA03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C72A5FB41F98CE4E00D5FA03 /* StreamAMG-TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StreamAMG-TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C72A5FB81F98CE4E00D5FA03 /* StreamAMG_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamAMG_TestTests.m; sourceTree = "<group>"; };
 		C72A5FBA1F98CE4E00D5FA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C783242C1F99E8BB00B4EA62 /* PMOVideoDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMOVideoDescriptor.h; sourceTree = "<group>"; };
+		C783242D1F99E8BB00B4EA62 /* PMOVideoDescriptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMOVideoDescriptor.m; sourceTree = "<group>"; };
+		C78C61AB1F99EADB0028CBD0 /* PMOVideoDescriptorFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PMOVideoDescriptorFactory.h; sourceTree = "<group>"; };
+		C78C61AC1F99EADB0028CBD0 /* PMOVideoDescriptorFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMOVideoDescriptorFactory.m; sourceTree = "<group>"; };
+		C78C61AE1F99ECC10028CBD0 /* PMOVideoDesriptorFactoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PMOVideoDesriptorFactoryTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C720482F1F99E14600DB36DB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C72048311F99E15400DB36DB /* NetworkReachabilityManager.h */,
+				C72048301F99E15400DB36DB /* NetworkReachabilityManager.m */,
+				C72048331F99E15400DB36DB /* PMODownloader.h */,
+				C72048321F99E15400DB36DB /* PMODownloader.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C72048341F99E15E00DB36DB /* Abstracts */ = {
+			isa = PBXGroup;
+			children = (
+				C72048351F99E16C00DB36DB /* Protocols */,
+			);
+			path = Abstracts;
+			sourceTree = "<group>";
+		};
+		C72048351F99E16C00DB36DB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C72048391F99E1B200DB36DB /* PMOJSONProcessor.h */,
+				C72048381F99E1B200DB36DB /* PMOLocalPictureExtractor.h */,
+				C72048361F99E1B200DB36DB /* PMOPictureDownloader.h */,
+				C72048371F99E1B200DB36DB /* PMOProgressUpdateable.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		C72A5F931F98CE4D00D5FA03 = {
 			isa = PBXGroup;
 			children = (
@@ -81,15 +125,14 @@
 		C72A5F9E1F98CE4D00D5FA03 /* StreamAMG-Test */ = {
 			isa = PBXGroup;
 			children = (
-				C72A5F9F1F98CE4D00D5FA03 /* AppDelegate.h */,
-				C72A5FA01F98CE4D00D5FA03 /* AppDelegate.m */,
-				C72A5FA21F98CE4D00D5FA03 /* ViewController.h */,
-				C72A5FA31F98CE4D00D5FA03 /* ViewController.m */,
-				C72A5FA51F98CE4D00D5FA03 /* Main.storyboard */,
-				C72A5FA81F98CE4D00D5FA03 /* Assets.xcassets */,
-				C72A5FAA1F98CE4D00D5FA03 /* LaunchScreen.storyboard */,
+				C783242B1F99E66E00B4EA62 /* Factories */,
+				C783242A1F99E66700B4EA62 /* Models */,
+				C72048341F99E15E00DB36DB /* Abstracts */,
+				C720482F1F99E14600DB36DB /* Networking */,
+				C72A5FC61F98CEC200D5FA03 /* ViewControllers */,
+				C72A5FC41F98CE7500D5FA03 /* UI */,
+				C72A5FC31F98CE5F00D5FA03 /* Supporting Files */,
 				C72A5FAD1F98CE4D00D5FA03 /* Info.plist */,
-				C72A5FAE1F98CE4D00D5FA03 /* main.m */,
 			);
 			path = "StreamAMG-Test";
 			sourceTree = "<group>";
@@ -97,10 +140,65 @@
 		C72A5FB71F98CE4E00D5FA03 /* StreamAMG-TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				C72A5FB81F98CE4E00D5FA03 /* StreamAMG_TestTests.m */,
+				C78C61AE1F99ECC10028CBD0 /* PMOVideoDesriptorFactoryTests.m */,
 				C72A5FBA1F98CE4E00D5FA03 /* Info.plist */,
 			);
 			path = "StreamAMG-TestTests";
+			sourceTree = "<group>";
+		};
+		C72A5FC31F98CE5F00D5FA03 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C72A5FAE1F98CE4D00D5FA03 /* main.m */,
+				C72A5F9F1F98CE4D00D5FA03 /* AppDelegate.h */,
+				C72A5FA01F98CE4D00D5FA03 /* AppDelegate.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C72A5FC41F98CE7500D5FA03 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C72A5FA81F98CE4D00D5FA03 /* Assets.xcassets */,
+				C72A5FC51F98CE8900D5FA03 /* StoryBoards */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C72A5FC51F98CE8900D5FA03 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				C72A5FA51F98CE4D00D5FA03 /* Main.storyboard */,
+				C72A5FAA1F98CE4D00D5FA03 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		C72A5FC61F98CEC200D5FA03 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C72A5FA21F98CE4D00D5FA03 /* ViewController.h */,
+				C72A5FA31F98CE4D00D5FA03 /* ViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C783242A1F99E66700B4EA62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C783242C1F99E8BB00B4EA62 /* PMOVideoDescriptor.h */,
+				C783242D1F99E8BB00B4EA62 /* PMOVideoDescriptor.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C783242B1F99E66E00B4EA62 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				C78C61AB1F99EADB0028CBD0 /* PMOVideoDescriptorFactory.h */,
+				C78C61AC1F99EADB0028CBD0 /* PMOVideoDescriptorFactory.m */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72A5FA41F98CE4D00D5FA03 /* ViewController.m in Sources */,
+				C783242E1F99E8BB00B4EA62 /* PMOVideoDescriptor.m in Sources */,
+				C78C61AD1F99EADB0028CBD0 /* PMOVideoDescriptorFactory.m in Sources */,
 				C72A5FAF1F98CE4D00D5FA03 /* main.m in Sources */,
 				C72A5FA11F98CE4D00D5FA03 /* AppDelegate.m in Sources */,
 			);
@@ -215,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C72A5FB91F98CE4E00D5FA03 /* StreamAMG_TestTests.m in Sources */,
+				C78C61AF1F99ECC10028CBD0 /* PMOVideoDesriptorFactoryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -346,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -360,10 +460,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YBS3Y2WC7;
 				INFOPLIST_FILE = "StreamAMG-Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.StreamAMG-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -374,10 +475,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YBS3Y2WC7;
 				INFOPLIST_FILE = "StreamAMG-Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "hu.petermolnar.StreamAMG-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
