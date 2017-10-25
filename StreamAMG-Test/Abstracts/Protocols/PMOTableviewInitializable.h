@@ -22,8 +22,7 @@
 /**
  Initialize the table view and the data. This method should be called on the object, which contains the tableview.
 
- @param tableData An Array of the table datasource elements.
  */
-- (void)initializeTableViewWithData:(nonnull NSArray *)tableData;
+- (void)initializeTableView;
 
 @end

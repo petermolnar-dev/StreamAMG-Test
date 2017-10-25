@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ Simple NSURLSession wrapper
+ */
 @interface PMODownloader : NSObject
 - (void)downloadDataFromURL:(nonnull NSURL *)url completionHander:(void(^_Nonnull)(BOOL success, NSData * _Nullable downloadedData, NSError * _Nullable error))callback;
 @end

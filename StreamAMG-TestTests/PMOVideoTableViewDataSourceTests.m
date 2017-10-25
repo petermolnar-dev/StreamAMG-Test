@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "PMOVideoTableViewDataSource.h"
-#import "PMOVideoDescriptorFactory.h"
+#import "PMOVideoStore.h"
 
 @interface PMOVideoTableViewDataSourceTests : XCTestCase
 
@@ -17,9 +17,9 @@
 @implementation PMOVideoTableViewDataSourceTests
 
 - (void)testInitWithEmptyList {
-    NSArray <PMOVideoDescriptor *> *descriptorList = @[];
+    PMOVideoStore *mockStore = [[PMOVideoStore alloc] init];
     
-    PMOVideoTableViewDataSource *newSource = [[PMOVideoTableViewDataSource alloc] initWithVideoDescriptors:descriptorList];
+    PMOVideoTableViewDataSource *newSource = [[PMOVideoTableViewDataSource alloc] initWithVideoMetadataProvider:mockStore];
 
     XCTAssertNil(newSource);
 }
@@ -29,6 +29,7 @@
     NSMutableArray <PMOVideoDescriptor *> *descriptorList = [[NSMutableArray alloc] init];
     UITableView *mockTableView = [[UITableView alloc] init];
     
+    PMOVideoStore *mockStore = [[PMOVideoStore alloc] init];
     NSArray *mockJSONArrayData = @[@{
         @"title": @"1st video in the list",
         @"thumbnail_url": @"",
@@ -43,10 +44,10 @@
                                    }];
     
     for (NSDictionary *currentVideoData in mockJSONArrayData) {
-        [descriptorList addObject:[PMOVideoDescriptorFactory buildVideoDescriptorFromDictionary:currentVideoData]];
+        [mockStore addMetaDataFromDictionary:currentVideoData];
     }
     
-    PMOVideoTableViewDataSource *newSource = [[PMOVideoTableViewDataSource alloc] initWithVideoDescriptors:descriptorList];
+    PMOVideoTableViewDataSource *newSource = [[PMOVideoTableViewDataSource alloc] initWithVideoMetadataProvider:mockStore];
     
     XCTAssertNotNil(newSource);
     XCTAssert([newSource tableView:mockTableView numberOfRowsInSection:1] == 2);

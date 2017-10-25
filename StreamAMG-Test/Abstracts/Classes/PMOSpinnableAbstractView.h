@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "PMOSpinnable.h"
 
+
+/**
+ An abstract class for a view, which can display a spinner 
+ */
 @interface PMOSpinnableAbstractView : UIView <PMOSpinnable>
 
 @end

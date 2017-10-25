@@ -9,39 +9,49 @@
 #import "PMOVideoTableViewDataSource.h"
 
 @interface PMOVideoTableViewDataSource()
-@property (strong, nonatomic, nullable) NSArray <PMOVideoDescriptor *> *videoDescriptors;
+@property (weak, nonatomic, nullable) id <PMOVideoMetaDataProvider> videoMetaDataProvider;
 @end
 
 @implementation PMOVideoTableViewDataSource
 
-- (nullable instancetype)initWithVideoDescriptors:(nonnull NSArray <PMOVideoDescriptor *> *)videoDescriptors {
+#pragma mark - Designated initializer
+- (nullable instancetype)initWithVideoMetadataProvider:(nonnull id <PMOVideoMetaDataProvider>)videoMetadataProvider {
     self = [super init];
     
     if (self) {
-        _videoDescriptors = videoDescriptors;
+        _videoMetaDataProvider = videoMetadataProvider;
     }
-    if (!videoDescriptors || [videoDescriptors count] == 0) {
+    if (!videoMetadataProvider || [videoMetadataProvider metadataCount] == 0) {
         return nil;
     } else {
         return self;
     }
 }
 
+#pragma mark - Implementing the UITableViewDatasource protocol
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-     static NSString *cellIdentifier = @"VideoCell";
+    static NSString *cellIdentifier = @"VideoCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     
-
+    
 #warning TODO: implement custom cell
-    NSString *currTitle = [self.videoDescriptors objectAtIndex:indexPath.row].title;
-    NSString *currDuration = [self.videoDescriptors objectAtIndex:indexPath.row].durationAsString;
-    UIImage *currImage = [self.videoDescriptors objectAtIndex:indexPath.row].thumbnailImage;
+    NSDictionary *currentMetaItem = [self.videoMetaDataProvider metadataDictionaryAtIndex:indexPath.row];
+    NSString *currTitle = [currentMetaItem objectForKey:@"title"];
+    NSString *currDuration = [currentMetaItem objectForKey:@"duration"];
+        UIImage *currImage;
+    if ([[currentMetaItem objectForKey:@"thumbnail_url"] length] == 0) {
+        currImage = [UIImage imageNamed:@"streamamg-logo"];
+    } else {
+        currImage = [currentMetaItem objectForKey:@"thumbnailImage"];
+    }
     
     cell.textLabel.text = currTitle;
     cell.detailTextLabel.text = currDuration;
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [cell.imageView setFrame:CGRectMake(cell.imageView.frame.origin.x, cell.imageView.frame.origin.y, cell.imageView.frame.size.width, cell.imageView.frame.size.width)];
     if (currImage) {
         cell.imageView.image = currImage;
     }
@@ -49,7 +59,7 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_videoDescriptors count];
+    return [self.videoMetaDataProvider metadataCount];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

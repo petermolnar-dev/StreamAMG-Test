@@ -10,6 +10,9 @@
 #import "PMOTableviewInitializable.h"
 
 
+/**
+ Viewcontroller to display the video selection list of the app.
+ */
 @interface PMOVideoListViewController : UIViewController <PMOTableviewInitializable>
 
 @end

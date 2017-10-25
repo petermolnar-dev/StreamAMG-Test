@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "PMOVideoDescriptor.h"
+#import "PMOVideoMetaDataProvider.h"
 
 
 /**
@@ -20,10 +20,10 @@
 /**
  Custom designated initializer
 
- @param videoDescriptors : A nonnul Array of the previously built video descriptor list.
+ @param videoMetadataProvider : A nonnul instance, which conforms the PMOVideoMetaDataProvider protocol, and therefore can provide the data for the cells.
  @return fully initialized instance of the datasource
  */
-- (nullable instancetype)initWithVideoDescriptors:(nonnull NSArray <PMOVideoDescriptor *> *)videoDescriptors NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithVideoMetadataProvider:(nonnull id <PMOVideoMetaDataProvider>)videoMetadataProvider NS_DESIGNATED_INITIALIZER;
 
 /**
  Disabling the original initialiser

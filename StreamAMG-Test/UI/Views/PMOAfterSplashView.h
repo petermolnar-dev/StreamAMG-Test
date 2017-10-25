@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "PMOSpinnableAbstractView.h"
 
+/**
+ Simple view, displaying while there is a background thread is happening (spinner display)
+ */
 @interface PMOAfterSplashView :  PMOSpinnableAbstractView
 
 @end

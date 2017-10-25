@@ -8,14 +8,16 @@
 
 #import "PMOVideoListViewController.h"
 #import "PMOVideoTableViewDataSource.h"
-#import "PMOVideoDescriptorFactory.h"
+#import "PMOVideoTableViewDelegate.h"
 #import "PMODownloader.h"
 #import "PMOAfterSplashView.h"
+#import "PMOVideoStore.h"
+
 
 @interface PMOVideoListViewController ()
 
-@property (strong, nullable, nonatomic) PMOAfterSplashView *afterSplashView;
-
+@property (strong, nonatomic, nullable) PMOAfterSplashView *afterSplashView;
+@property (strong, nonatomic, nonnull) PMOVideoStore *videoStore;
 @end
 
 @implementation PMOVideoListViewController
@@ -33,8 +35,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    if (!self.videoTableView) {
+    
     PMODownloader *downloader = [[PMODownloader alloc] init];
-    NSMutableArray *videoArray = [[NSMutableArray alloc] init];
     NSURL *downloadUrl = [NSURL URLWithString:@"https://demo.petermolnar.hu/streamamg.json"];
     
     __weak typeof(self) weakSelf = self;
@@ -47,11 +50,10 @@
                                                                   error:&jsonError];
             if (!jsonError) {
                 // Build the list of downloadable items.
-                for (NSDictionary *videoDictionary  in JSONData) {
-                    PMOVideoDescriptor *currentVideoDescriptor = [PMOVideoDescriptorFactory buildVideoDescriptorFromDictionary:videoDictionary];
-                    [videoArray addObject:currentVideoDescriptor];
+                for (NSDictionary *currentMetaData in JSONData) {
+                    [weakSelf.videoStore addMetaDataFromDictionary:currentMetaData];
                 }
-                [weakSelf initializeTableViewWithData:videoArray];
+                [weakSelf initializeTableView];
             } else {
                 NSLog(@"Error during parsing the JSON: %@", jsonError.localizedDescription);
             }
@@ -59,7 +61,7 @@
             [weakSelf.afterSplashView stopSpinner];
         }
     }];
-    
+    }
 
 }
 
@@ -68,25 +70,30 @@
 - (PMOAfterSplashView *)afterSplashView {
     if (!_afterSplashView) {
         _afterSplashView = [[PMOAfterSplashView alloc] initWithFrame:self.view.frame];
+        _afterSplashView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     return _afterSplashView;
 }
 
-#pragma mark - Navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
 
+- (PMOVideoStore *)videoStore {
+    if (!_videoStore) {
+        _videoStore = [[PMOVideoStore alloc] init];
+    }
+    
+    return _videoStore;
+}
 #pragma mark - Implementing protocols
 
-- (void)initializeTableViewWithData:(NSArray *)tableData  {
-    self.videoTableViewDataSource = [[PMOVideoTableViewDataSource alloc] initWithVideoDescriptors:tableData];
+- (void)initializeTableView {
+    self.videoTableViewDataSource = [[PMOVideoTableViewDataSource alloc] initWithVideoMetadataProvider:self.videoStore];
+    self.videoTableViewDelegate = [[PMOVideoTableViewDelegate alloc] initWithVideoPlayableItemProvider:self.videoStore metadataProvider:self.videoStore targetViewController:self];
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         self.videoTableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
         self.videoTableView.dataSource = self.videoTableViewDataSource;
+        self.videoTableView.delegate = self.videoTableViewDelegate;
         [self.view addSubview:self.videoTableView];
+        self.videoTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self.videoTableView reloadData];
     }];
     
