@@ -48,13 +48,20 @@
         NSDictionary *metadataDictionary = @{@"title" : descriptorAtIndex.title,
                                              @"video_url" : descriptorAtIndex.videoUrlAsString,
                                              @"duration" : descriptorAtIndex.durationAsString,
-                                             @"thumbnail_url" : descriptorAtIndex.thumbnailUrlAsString
+                                             @"thumbnail_url" : descriptorAtIndex.thumbnailUrlAsString,                                             @"thumbnailImage" : descriptorAtIndex.thumbnailImage ? descriptorAtIndex.thumbnailImage : [UIImage imageNamed:@"streamamg-logo"]
                                              };
         return metadataDictionary;
     } else {
         return nil;
     }
-    
+}
+
+- (void)updateThumbnailImageforVideo:(NSString *)videoUrlAsString withThumbnailImage:(UIImage *)thumbnailImage {
+    for (PMOVideoDescriptor *currDescriptor in self.videoMetadataArray) {
+        if ([currDescriptor.videoUrlAsString isEqualToString:videoUrlAsString]) {
+            currDescriptor.thumbnailImage = thumbnailImage;
+        }
+    }
 }
 
 #pragma mark - implementing PMOVideoMetaDataProvider protocol

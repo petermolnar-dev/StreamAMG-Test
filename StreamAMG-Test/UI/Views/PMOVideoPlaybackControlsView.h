@@ -22,7 +22,7 @@
 
  @param frame the frame for the controls view
  @param controlReceiver The target of the control events
- @param 
+ @param dismissableViewController The reference of the viewcontroller, which is presenting the player view. The viewcontroller need sto implement the PMOViewControllerDismissable protocol
  @return a fully initialized instance.
  */
 - (nonnull instancetype)initWithFrame:(CGRect)frame controlReceiver:(nonnull id <PMOVideoControlReceiver>)controlReceiver dismissableViewController:(nonnull id <PMOViewControllerDismissable>)dismissableViewController;

@@ -8,6 +8,7 @@
 
 #import "PMOVideoTableViewDataSource.h"
 
+
 @interface PMOVideoTableViewDataSource()
 @property (weak, nonatomic, nullable) id <PMOVideoMetaDataProvider> videoMetaDataProvider;
 @end
@@ -35,25 +36,22 @@
     
     if (cell == nil)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-    
-    
-#warning TODO: implement custom cell
+
     NSDictionary *currentMetaItem = [self.videoMetaDataProvider metadataDictionaryAtIndex:indexPath.row];
     NSString *currTitle = [currentMetaItem objectForKey:@"title"];
     NSString *currDuration = [currentMetaItem objectForKey:@"duration"];
-        UIImage *currImage;
-    if ([[currentMetaItem objectForKey:@"thumbnail_url"] length] == 0) {
+    UIImage *currImage = [currentMetaItem objectForKey:@"thumbnailImage"];
+    if (!currImage) {
         currImage = [UIImage imageNamed:@"streamamg-logo"];
-    } else {
-        currImage = [currentMetaItem objectForKey:@"thumbnailImage"];
-    }
+    } 
     
     cell.textLabel.text = currTitle;
     cell.detailTextLabel.text = currDuration;
+
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [cell.imageView setFrame:CGRectMake(cell.imageView.frame.origin.x, cell.imageView.frame.origin.y, cell.imageView.frame.size.width, cell.imageView.frame.size.width)];
+
     if (currImage) {
-        cell.imageView.image = currImage;
+        cell.imageView.image = [self imageWithImage:currImage scaledToSize:CGSizeMake(30, 30)];
     }
     return cell;
 }
@@ -64,6 +62,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+#pragma mark - Helper functions
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 @end

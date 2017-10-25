@@ -16,6 +16,7 @@
     NSString *videoUrlAsString = [videoDetailsDictionary valueForKey:@"video_url"];
     NSString *durationAsString = [videoDetailsDictionary valueForKey:@"duration"];
     NSString *thumbnailUrlAsString = [videoDetailsDictionary valueForKey:@"thumbnail_url"];
+    UIImage *thumbnailImage = [videoDetailsDictionary valueForKey:@"thumbnailImage"];
     
     // Basic data null validation
     if (title && videoUrlAsString && durationAsString) {
@@ -24,6 +25,7 @@
         videoDescriptor.videoUrlAsString = videoUrlAsString;
         videoDescriptor.durationAsString = durationAsString;
         videoDescriptor.thumbnailUrlAsString = thumbnailUrlAsString;
+        videoDescriptor.thumbnailImage = thumbnailImage;
         
         return videoDescriptor;
     } else {

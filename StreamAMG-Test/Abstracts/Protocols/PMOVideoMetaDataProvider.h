@@ -18,5 +18,6 @@
 - (NSDictionary *)metadataDictionaryAtIndex:(NSInteger)index;
 - (void)addMetaDataFromDictionary:(NSDictionary *)metadataAsDictionary;
 - (NSUInteger)metadataCount;
+- (void)updateThumbnailImageforVideo:(NSString *)videoUrlAsString withThumbnailImage:(UIImage *)thumbnailImage;
 
 @end
